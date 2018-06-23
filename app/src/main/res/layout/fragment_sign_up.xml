@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment">
+
+    <EditText
+        android:id="@+id/edit_text_fullnames"
+        android:layout_width="305dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/ubuntu"
+        android:hint="@string/fullnames"
+        android:paddingBottom="19dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:textColor="#a1a1a1"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16sp" />
+
+</RelativeLayout>

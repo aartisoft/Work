@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AgriPay</string>
+    <string name="lets_shop">Lets Shop</string>
+    <string name="splash_text">Lorem ipsum dolor sit amet, consectetur dipisicing elit,</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="fullnames">Full names</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+</resources>
