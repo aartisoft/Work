@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/listview_icon"
+        android:layout_width="44dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/dashboard_listview_icon" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listview_icon"
+        android:layout_toEndOf="@id/listview_icon"
+        android:layout_toRightOf="@id/listview_icon"
+        android:text="Tomatoes"
+        android:textColor="#568832"
+        android:textSize="16dp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+    <TextView
+        android:id="@+id/item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_name"
+        android:layout_alignStart="@+id/item_name"
+        android:layout_below="@+id/item_name"
+        android:text="#veggy0901"
+        android:textColor="#2c3e50"
+        android:textSize="16dp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+    <TextView
+        android:id="@+id/item_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_name"
+        android:layout_alignStart="@+id/item_name"
+        android:layout_below="@+id/item_number"
+        android:text="Credit Card"
+        android:textColor="#bdc3c7"
+        android:textSize="16dp"
+        app:fontFamily="@font/ubuntu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listview_icon"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/item_amount"
+        android:text="KES"
+        android:textColor="#bdc3c7"
+        android:textSize="18dp"
+        app:fontFamily="@font/ubuntu_medium"
+        android:layout_toStartOf="@id/item_amount" />
+
+    <TextView
+        android:id="@+id/item_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/listview_icon"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:text="1,500"
+        android:textColor="#323232"
+        android:textSize="18dp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+    <TextView
+        android:id="@+id/item_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/item_amount"
+        android:layout_alignRight="@+id/item_amount"
+        android:layout_below="@+id/item_amount"
+        android:layout_marginTop="5dp"
+        android:text="Completed"
+        android:textColor="#5f963b"
+        android:textSize="18dp"
+        app:fontFamily="@font/ubuntu_medium" />
+</RelativeLayout>

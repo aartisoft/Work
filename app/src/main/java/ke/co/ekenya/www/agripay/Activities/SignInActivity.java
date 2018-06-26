@@ -1,13 +1,15 @@
-package ke.co.ekenya.www.agripay;
+package ke.co.ekenya.www.agripay.Activities;
 
-import android.content.Intent;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import ke.co.ekenya.www.agripay.Fragments.SignInFragment;
+import ke.co.ekenya.www.agripay.Fragments.SignUpFragment;
+import ke.co.ekenya.www.agripay.R;
 
 public class SignInActivity extends AppCompatActivity {
     private FrameLayout sign_n_or_sign_up_content;

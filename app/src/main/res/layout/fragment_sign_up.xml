@@ -1,28 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpFragment">
+    android:scrollbars="none">
 
-    <EditText
-        android:id="@+id/edit_text_fullnames"
-        android:layout_width="305dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edit_text_background"
-        android:fontFamily="@font/ubuntu"
-        android:hint="@string/fullnames"
-        android:paddingBottom="19dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingEnd="30dp"
-        android:paddingStart="30dp"
-        android:paddingTop="8dp"
-        android:textColor="#a1a1a1"
-        android:textColorHint="#a1a1a1"
-        android:textSize="16sp" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.SignUpFragment">
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/edit_text_fullnames"
+            android:layout_width="305dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/ubuntu"
+            android:hint="@string/fullnames"
+            android:paddingBottom="19dp"
+            android:paddingEnd="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingStart="30dp"
+            android:paddingTop="8dp"
+            android:textColor="#a1a1a1"
+            android:textColorHint="#a1a1a1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="305dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edit_text_fullnames"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/ubuntu"
+            android:hint="@string/email"
+            android:paddingBottom="19dp"
+            android:paddingEnd="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingStart="30dp"
+            android:paddingTop="8dp"
+            android:textColor="#a1a1a1"
+            android:textColorHint="#a1a1a1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_text_mobile"
+            android:layout_width="305dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edit_text_email"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/ubuntu"
+            android:hint="@string/mobile_number"
+            android:paddingBottom="19dp"
+            android:paddingEnd="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingStart="30dp"
+            android:paddingTop="8dp"
+            android:textColor="#a1a1a1"
+            android:textColorHint="#a1a1a1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_text_location"
+            android:layout_width="305dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edit_text_mobile"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/ubuntu"
+            android:hint="@string/location"
+            android:paddingBottom="19dp"
+            android:paddingEnd="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingStart="30dp"
+            android:paddingTop="8dp"
+            android:textColor="#a1a1a1"
+            android:textColorHint="#a1a1a1"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="228dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edit_text_location"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="9dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</ScrollView>

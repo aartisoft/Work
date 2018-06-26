@@ -5,13 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".SignInActivity">
+    tools:context=".Activities.SignInActivity">
 
     <ImageView
         android:id="@+id/first_background"
         android:layout_width="match_parent"
         android:layout_height="249dp"
         android:background="@drawable/splash_background" />
+
+    <ImageView
+        android:id="@+id/agripay_logo"
+        android:layout_width="68.5dp"
+        android:layout_height="114.3dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/agripay_logo" />
+
+    <TextView
+        android:id="@+id/sign_in_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/splash_text"
+        android:textColor="#a1a1a1"
+        android:textSize="12sp"
+        app:fontFamily="@font/ubuntu_medium" />
 
     <ImageView
         android:id="@+id/second_background"
@@ -80,10 +105,10 @@
     <FrameLayout
         android:id="@+id/sign_n_or_sign_up_content"
         android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/second_background" />
+        android:layout_alignTop="@+id/second_background"
+        android:layout_marginTop="30dp" />
 
 </RelativeLayout>

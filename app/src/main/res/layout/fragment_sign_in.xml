@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fafafa"
-    tools:context=".SignInFragment">
+    tools:context=".Fragments.SignInFragment">
 
     <EditText
         android:id="@+id/edit_text_username"
@@ -58,10 +58,10 @@
         android:textColor="#669a3d"
         android:textSize="14dp" />
 
-    <TextView
+    <Button
         android:id="@+id/sign_in"
         android:layout_width="228dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="220dp"

@@ -9,4 +9,22 @@
     <string name="fullnames">Full names</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="sign_up">Sign up</string>
+    <string name="wallet">Wallet</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="ad_text_one">Whats’s on the menu\nthis summer?</string>
+    <string name="ad_text_two"><![CDATA[Fruit, Vegetable\n& More Vegetables]]></string>
+    <string name="ad_text_three">UpTO 10% Off</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="load_money">+ Load Money</string>
+    <string name="cash_kshs">Cash(KSHS)</string>
+    <string name="monthly">Monthly</string>
+    <string name="weekly">Weekly</string>
+    <string name="title_activity_trial">TrialActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

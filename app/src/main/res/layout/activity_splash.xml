@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".SplashActivity">
+    tools:context=".Activities.SplashActivity">
 
     <ImageView
         android:id="@+id/first_background"
@@ -48,19 +48,22 @@
 
     <TextView
         android:id="@+id/lets_shop"
+        style="@android:style/Widget.Button"
         android:layout_width="228dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="96dp"
         android:background="@drawable/button_background"
+        android:clickable="false"
         android:drawableEnd="@drawable/chevron_right"
         android:drawableRight="@drawable/chevron_right"
+        android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingEnd="30dp"
-        android:paddingLeft="85dp"
+        android:paddingLeft="45dp"
         android:paddingRight="30dp"
-        android:paddingStart="85dp"
+        android:paddingStart="45dp"
         android:paddingTop="7dp"
         android:text="@string/lets_shop"
         android:textColor="@color/colorWhite"
