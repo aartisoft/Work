@@ -1,132 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
-    tools:context=".Fragments.WalletFragment">
+    android:background="#fafafa"
+    android:scrollbars="none">
 
-    <ImageView
-        android:id="@+id/bottom_background"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/colorWhite"
-        android:scaleType="fitXY"
-        android:src="@drawable/wallet_background" />
-
-    <TextView
-        android:id="@+id/available_balance_text"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="@string/available_balance"
-        android:textColor="#568832"
-        android:textSize="18sp"
-        app:fontFamily="@font/ubuntu_medium" />
-
-    <TextView
-        android:id="@+id/available_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/available_balance_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="Ksh. 10,000"
-        android:textColor="#185490"
-        android:textSize="35sp"
-        app:fontFamily="@font/ubuntu_bold" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_below="@+id/available_balance"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/wallet_button"
-        android:paddingBottom="10dp"
-        android:paddingEnd="25dp"
-        android:paddingStart="25dp"
-        android:paddingTop="8dp"
-        android:text="@string/load_money"
-        android:textColor="#548733"
-        android:textSize="14sp"
-        app:fontFamily="@font/ubuntu_medium" />
-
-    <LinearLayout
-        android:id="@+id/ad_rectangle"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_below="@+id/bottom_background"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/wallet_rectangle"
-        android:gravity="center"
-        android:orientation="horizontal">
+        tools:context=".Fragments.WalletFragment">
 
         <ImageView
-            android:id="@+id/ad_image"
-            android:layout_width="0dp"
+            android:id="@+id/bottom_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorWhite"
+            android:scaleType="fitXY"
+            android:src="@drawable/wallet_background" />
+
+        <TextView
+            android:id="@+id/available_balance_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="6"
-            android:src="@drawable/ad_image" />
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/available_balance"
+            android:textColor="#568832"
+            android:textSize="18sp"
+            app:fontFamily="@font/ubuntu_medium" />
+
+        <TextView
+            android:id="@+id/available_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/available_balance_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Ksh. 10,000"
+            android:textColor="#185490"
+            android:textSize="35sp"
+            app:fontFamily="@font/ubuntu_bold" />
+
+        <Button
+            android:id="@+id/button_load_money"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_below="@+id/available_balance"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/wallet_button"
+            android:paddingBottom="10dp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp"
+            android:paddingTop="8dp"
+            android:text="@string/load_money"
+            android:textColor="#548733"
+            android:textSize="14sp"
+            app:fontFamily="@font/ubuntu_medium" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:id="@+id/ad_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/bottom_background"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/wallet_rectangle"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/ad_text_one"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/ad_image"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="22dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:text="@string/ad_text_one"
-                android:textColor="#34495e"
-                android:textSize="12sp"
-                app:fontFamily="@font/ubuntu_bold" />
+                android:layout_gravity="center"
+                android:layout_weight="6"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:src="@drawable/ad_image" />
 
-            <TextView
-                android:id="@+id/ad_text_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="5dp"
-                android:text="@string/ad_text_two"
-                android:textColor="#589926"
-                android:textSize="18sp"
-                app:fontFamily="@font/ubuntu_bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/ad_text_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="5dp"
-                android:paddingBottom="5dp"
-                android:text="@string/ad_text_three"
-                android:textColor="#e43d10"
-                android:textSize="18sp"
-                app:fontFamily="@font/ubuntu_bold" />
+                <TextView
+                    android:id="@+id/ad_text_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/ad_text_one"
+                    android:textColor="#34495e"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/ubuntu_bold" />
+
+                <TextView
+                    android:id="@+id/ad_text_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/ad_text_two"
+                    android:textColor="#589926"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/ubuntu_bold" />
+
+                <TextView
+                    android:id="@+id/ad_text_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/ad_text_three"
+                    android:textColor="#e43d10"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/ubuntu_bold" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

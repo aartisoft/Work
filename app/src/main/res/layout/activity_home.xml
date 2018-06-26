@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/top_background"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="140dp"
         android:background="@drawable/home_background" />
 
     <ImageView
@@ -19,7 +19,7 @@
         android:layout_height="107dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="55dp"
         android:background="@drawable/home_background2" />
 
     <TextView
@@ -93,7 +93,7 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/wallet_or_dashboard_content"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -105,10 +105,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/colorWhite"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_centerInParent="true"
         android:background="@drawable/gradient_shade"
+        app:itemIconTint="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_bottom_navigation" />
 </RelativeLayout>
