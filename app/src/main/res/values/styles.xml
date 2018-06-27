@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ShopItemsRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorAccent">#3e7a3a</item>
+        <item name="colorControlNormal">#A9A9A9</item>
+    </style>
+
 </resources>

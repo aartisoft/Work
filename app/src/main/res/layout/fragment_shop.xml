@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    tools:context=".Fragments.ShopFragment">
+
+    <ImageView
+        android:id="@+id/agripay_logo"
+        android:layout_width="41dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/agripay_logo" />
+
+    <ImageView
+        android:id="@+id/shop_search"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/search_icon" />
+
+    <ImageView
+        android:id="@+id/shop_cart"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/shop_search"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/shop_cart" />
+
+    <TextView
+        android:id="@+id/cart_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/agripay_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/green_circle"
+        android:gravity="center"
+        android:paddingEnd="3dp"
+        android:paddingStart="3dp"
+        android:text="4"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+    <RelativeLayout
+        android:id="@+id/sliding_images"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/agripay_logo"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/slide_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/slide_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/sliding_images"
+        android:layout_gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shop_spinner"
+        android:entries="@array/spinnerCategoryItems"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/shop_fragment_bottom_left" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/shop_fragment_bottom_right" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shop_items_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/categories_spinner"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:scrollbars="none" />
+
+</RelativeLayout>

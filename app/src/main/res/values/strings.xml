@@ -28,4 +28,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="today">Today</string>
+    <string-array name="spinnerCategoryItems">
+        <item>Categories</item>
+    </string-array>
 </resources>

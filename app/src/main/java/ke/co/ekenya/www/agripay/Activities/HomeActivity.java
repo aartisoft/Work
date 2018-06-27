@@ -3,21 +3,26 @@ package ke.co.ekenya.www.agripay.Activities;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import ke.co.ekenya.www.agripay.Fragments.DashboardFragment;
+import ke.co.ekenya.www.agripay.Fragments.ShopFragment;
 import ke.co.ekenya.www.agripay.Fragments.WalletFragment;
+import ke.co.ekenya.www.agripay.Helper.BottomNavigationViewBehaviour;
 import ke.co.ekenya.www.agripay.Helper.BottomNavigationViewHelper;
 import ke.co.ekenya.www.agripay.R;
 
 public class HomeActivity extends AppCompatActivity {
     TextView home_highlight, text_wallet, text_dashboard;
-    ImageView text_wallet_highlight, text_dashboard_highlight;
+    ImageView text_wallet_highlight, text_dashboard_highlight, top_background, center_background;
+    LinearLayout linear_wallet_dashboard;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,10 +35,11 @@ public class HomeActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_shop:
-                    //CreateAdFragment fragment = new CreateAdFragment();
-                    //android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    //fragmentTransaction.replace(R.id.Content, fragment);
-                    // fragmentTransaction.commit();
+                    initializeViewsDisappear();
+                    ShopFragment fragmentS = new ShopFragment();
+                    android.support.v4.app.FragmentTransaction fragmentTransactionS = getSupportFragmentManager().beginTransaction();
+                    fragmentTransactionS.replace(R.id.content, fragmentS);
+                    fragmentTransactionS.commit();
                     return true;
 
                 case R.id.navigation_transactions:
@@ -65,9 +71,16 @@ public class HomeActivity extends AppCompatActivity {
         text_dashboard = findViewById(R.id.text_dashboard);
         text_wallet_highlight = findViewById(R.id.text_wallet_highlight);
         text_dashboard_highlight = findViewById(R.id.text_dashboard_highlight);
+        top_background = findViewById(R.id.top_background);
+        center_background = findViewById(R.id.center_background);
+        linear_wallet_dashboard = findViewById(R.id.linear_wallet_dashboard);
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.removeShiftMode(navigation);
+
+        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) navigation.getLayoutParams();
+        layoutParams.setBehavior(new BottomNavigationViewBehaviour());
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         initialize();
@@ -121,5 +134,20 @@ public class HomeActivity extends AppCompatActivity {
         text_dashboard.setTypeface(ubuntu_light);
         text_dashboard_highlight.setVisibility(View.INVISIBLE);
 
+        initializeViewsAppear();
+    }
+
+    private void initializeViewsAppear() {
+        linear_wallet_dashboard.setVisibility(View.VISIBLE);
+        home_highlight.setVisibility(View.VISIBLE);
+        center_background.setVisibility(View.VISIBLE);
+        top_background.setVisibility(View.VISIBLE);
+    }
+
+    private void initializeViewsDisappear() {
+        linear_wallet_dashboard.setVisibility(View.GONE);
+        home_highlight.setVisibility(View.GONE);
+        center_background.setVisibility(View.GONE);
+        top_background.setVisibility(View.GONE);
     }
 }
