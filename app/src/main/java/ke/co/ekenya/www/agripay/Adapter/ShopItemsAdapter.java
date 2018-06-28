@@ -1,6 +1,8 @@
 package ke.co.ekenya.www.agripay.Adapter;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import ke.co.ekenya.www.agripay.Fragments.AddToCartFragment;
 import ke.co.ekenya.www.agripay.R;
 
 
@@ -54,8 +57,9 @@ public class ShopItemsAdapter extends RecyclerView.Adapter<ShopItemsAdapter.MyVi
         holder.item_price.setText("Kshs." + itemPrice.get(position));
         holder.item_name.setText(itemName.get(position));
         holder.item_unit.setText(itemUnit.get(position));
+        holder.item_rating.setRating(Float.parseFloat(itemRating.get(position)));
 
-        //holder.item_rating.setRating(Float.parseFloat(itemRating.get(position)));
+        //Toast.makeText(context, itemRating.get(position), Toast.LENGTH_SHORT).show();
 
         Glide
                 .with(context)
@@ -67,7 +71,24 @@ public class ShopItemsAdapter extends RecyclerView.Adapter<ShopItemsAdapter.MyVi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //when item on list is clicked
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                AddToCartFragment fragmentA = new AddToCartFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransactionA = activity.getSupportFragmentManager().beginTransaction();
+
+                Bundle bundle = new Bundle();
+                //key first then value
+                bundle.putString("price", itemPrice.get(position));
+                bundle.putString("name", itemName.get(position));
+                bundle.putString("unit", itemUnit.get(position));
+                bundle.putString("rating", itemRating.get(position));
+
+                fragmentA.setArguments(bundle);
+
+                fragmentTransactionA.replace(R.id.content, fragmentA);
+                fragmentTransactionA.addToBackStack(null);
+                fragmentTransactionA.commit();
+
             }
         });
 

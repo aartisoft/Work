@@ -1,11 +1,12 @@
 package ke.co.ekenya.www.agripay.Activities;
 
+import android.app.FragmentManager;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -35,11 +36,12 @@ public class HomeActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_shop:
-                    initializeViewsDisappear();
                     ShopFragment fragmentS = new ShopFragment();
                     android.support.v4.app.FragmentTransaction fragmentTransactionS = getSupportFragmentManager().beginTransaction();
                     fragmentTransactionS.replace(R.id.content, fragmentS);
+                    fragmentTransactionS.addToBackStack(null);
                     fragmentTransactionS.commit();
+                    initializeViewsDisappear();
                     return true;
 
                 case R.id.navigation_transactions:
@@ -105,6 +107,7 @@ public class HomeActivity extends AppCompatActivity {
         DashboardFragment fragmentD = new DashboardFragment();
         android.support.v4.app.FragmentTransaction fragmentTransactionD = getSupportFragmentManager().beginTransaction();
         fragmentTransactionD.replace(R.id.content, fragmentD);
+        fragmentTransactionD.addToBackStack(null);
         fragmentTransactionD.commit();
 
         Typeface ubuntu_light = Typeface.createFromAsset(getAssets(), "fonts/ubuntu_light.ttf");
@@ -122,6 +125,7 @@ public class HomeActivity extends AppCompatActivity {
         WalletFragment fragmentW = new WalletFragment();
         android.support.v4.app.FragmentTransaction fragmentTransactionW = getSupportFragmentManager().beginTransaction();
         fragmentTransactionW.replace(R.id.content, fragmentW);
+        fragmentTransactionW.addToBackStack(null);
         fragmentTransactionW.commit();
 
         Typeface ubuntu_light = Typeface.createFromAsset(getAssets(), "fonts/ubuntu_light.ttf");
@@ -149,5 +153,16 @@ public class HomeActivity extends AppCompatActivity {
         home_highlight.setVisibility(View.GONE);
         center_background.setVisibility(View.GONE);
         top_background.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager fm = getFragmentManager();
+        if (fm.getBackStackEntryCount() > 0) {
+            //fm.popBackStack();
+            fm.popBackStackImmediate();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

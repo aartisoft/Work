@@ -58,7 +58,7 @@
     <RelativeLayout
         android:id="@+id/sliding_images"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="140dp"
         android:layout_below="@+id/agripay_logo"
         android:layout_marginTop="10dp"
         android:background="@color/colorWhite">

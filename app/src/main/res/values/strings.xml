@@ -28,6 +28,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="today">Today</string>
+    <string name="add_to_cart">Add to cart</string>
     <string-array name="spinnerCategoryItems">
         <item>Categories</item>
     </string-array>

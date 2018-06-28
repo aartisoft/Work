@@ -58,7 +58,7 @@ public class ShopFragment extends Fragment {
             "10",
             "30"));
 
-    static ArrayList<String> itemRating = new ArrayList<>(Arrays.asList("Red Onion",
+    static ArrayList<String> itemRating = new ArrayList<>(Arrays.asList("4.5",
             "1.0",
             "2.0",
             "3.0",
