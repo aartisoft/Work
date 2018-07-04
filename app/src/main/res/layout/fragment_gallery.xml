@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/gallery_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/btn_close"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/close" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="119dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/thumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" />
+    </HorizontalScrollView>
+</RelativeLayout>

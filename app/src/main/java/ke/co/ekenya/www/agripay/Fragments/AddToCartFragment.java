@@ -1,6 +1,5 @@
 package ke.co.ekenya.www.agripay.Fragments;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import ke.co.ekenya.www.agripay.R;
 
 public class AddToCartFragment extends Fragment {
@@ -17,10 +18,10 @@ public class AddToCartFragment extends Fragment {
     ImageView item_image, item_content_remove, item_content_add;
     Button button_add_to_cart;
     String SPrice, SName, SUnit, SRating;
-    int intPrice, intCount, intTotal;
+    int intPrice, intCount, intTotal,intImage;
 
     public AddToCartFragment() {
-        // Required empty public constructor
+        //Required empty public constructor
     }
 
     @Override
@@ -44,6 +45,7 @@ public class AddToCartFragment extends Fragment {
         SName = getArguments().getString("name");
         SUnit = getArguments().getString("unit");
         SRating = getArguments().getString("rating");
+        intImage = getArguments().getInt("image");
 
         initialize();
 
@@ -63,7 +65,24 @@ public class AddToCartFragment extends Fragment {
             }
         });
 
+        item_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //do something
+                openGallery();
+            }
+        });
+
         return view;
+    }
+
+    private void openGallery() {
+        //starting image gallery fragment
+        GalleryFragment fragment = new GalleryFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     private void addUnit() {
@@ -109,6 +128,13 @@ public class AddToCartFragment extends Fragment {
         intTotal = intPrice * intCount;
 
         item_total_cost.setText("cost " + String.valueOf(intTotal));
+
+        Glide
+                .with(getActivity())
+                .load(intImage)
+                .crossFade()
+                .into(item_image);
+
     }
 
 

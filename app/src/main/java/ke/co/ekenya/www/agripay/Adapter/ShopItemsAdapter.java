@@ -82,6 +82,7 @@ public class ShopItemsAdapter extends RecyclerView.Adapter<ShopItemsAdapter.MyVi
                 bundle.putString("name", itemName.get(position));
                 bundle.putString("unit", itemUnit.get(position));
                 bundle.putString("rating", itemRating.get(position));
+                bundle.putInt("image", itemImage.get(position));
 
                 fragmentA.setArguments(bundle);
 
