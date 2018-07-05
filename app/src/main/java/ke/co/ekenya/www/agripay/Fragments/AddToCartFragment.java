@@ -15,10 +15,10 @@ import ke.co.ekenya.www.agripay.R;
 
 public class AddToCartFragment extends Fragment {
     TextView text_rating, item_name, item_total_cost, item_count, item_price;
-    ImageView item_image, item_content_remove, item_content_add;
+    ImageView item_image, item_content_remove, item_content_add, shop_cart;
     Button button_add_to_cart;
     String SPrice, SName, SUnit, SRating;
-    int intPrice, intCount, intTotal,intImage;
+    int intPrice, intCount, intTotal, intImage;
 
     public AddToCartFragment() {
         //Required empty public constructor
@@ -39,6 +39,7 @@ public class AddToCartFragment extends Fragment {
         item_content_remove = view.findViewById(R.id.item_content_remove);
         item_content_add = view.findViewById(R.id.item_content_add);
         button_add_to_cart = view.findViewById(R.id.button_add_to_cart);
+        shop_cart = view.findViewById(R.id.shop_cart);
 
         assert getArguments() != null;
         SPrice = getArguments().getString("price");
@@ -73,7 +74,30 @@ public class AddToCartFragment extends Fragment {
             }
         });
 
+        button_add_to_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToShoppingCartFragment();
+            }
+        });
+
+        shop_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToShoppingCartFragment();
+            }
+        });
+
         return view;
+    }
+
+    private void goToShoppingCartFragment() {
+        //opening shopping cart fragment
+        ShoppingCartFragment fragment = new ShoppingCartFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     private void openGallery() {

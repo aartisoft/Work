@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.WalletFragment">
+
+    <ImageView
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/home_background" />
+
+    <ImageView
+        android:id="@+id/center_background"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/home_background2" />
+
+    <TextView
+        android:id="@+id/home_highlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/transactions"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+</RelativeLayout>

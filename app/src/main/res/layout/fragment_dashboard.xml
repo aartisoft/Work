@@ -12,9 +12,97 @@
         tools:context=".Fragments.DashboardFragment">
 
         <ImageView
+            android:id="@+id/top_background"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/home_background" />
+
+        <ImageView
+            android:id="@+id/center_background"
+            android:layout_width="66dp"
+            android:layout_height="107dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/home_background2" />
+
+        <TextView
+            android:id="@+id/home_highlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/dashboard"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:fontFamily="@font/ubuntu_medium" />
+
+        <LinearLayout
+            android:id="@+id/linear_wallet_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/top_background"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/wallet"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="19sp"
+                    app:fontFamily="@font/ubuntu" />
+
+                <ImageView
+                    android:id="@+id/text_wallet_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/home_highlight"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/dashboard"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="19sp"
+                    app:fontFamily="@font/ubuntu_medium" />
+
+                <ImageView
+                    android:id="@+id/text_dashboard_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/home_highlight" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
             android:id="@+id/bottom_background"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_below="@+id/linear_wallet_dashboard"
             android:background="@color/colorWhite"
             android:scaleType="fitXY"
             android:src="@drawable/wallet_background" />
@@ -22,6 +110,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_wallet_dashboard"
             android:layout_marginTop="75dp"
             android:src="@drawable/dashboard_separator" />
 
@@ -29,6 +118,7 @@
             android:id="@+id/cash_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_wallet_dashboard"
             android:layout_marginLeft="20dp"
             android:layout_marginStart="70dp"
             android:layout_marginTop="74dp"
@@ -57,6 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/linear_wallet_dashboard"
             android:layout_marginEnd="75dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="74dp"
@@ -175,7 +266,6 @@
             android:divider="@drawable/dashboard_divider"
             android:dividerHeight="1dp"
             android:scrollbars="none"
-            tools:listitem="@layout/dashboard_listview">
-        </ListView>
+            tools:listitem="@layout/dashboard_listview" />
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,14 +10,14 @@
     <EditText
         android:id="@+id/edit_text_username"
         android:layout_width="305dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="@drawable/edit_text_background"
-        android:fontFamily="@font/ubuntu"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
         android:hint="@string/username"
-        android:paddingBottom="19dp"
+        android:paddingBottom="8dp"
         android:paddingEnd="30dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
@@ -24,19 +25,21 @@
         android:paddingTop="8dp"
         android:textColor="#a1a1a1"
         android:textColorHint="#a1a1a1"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
 
     <EditText
         android:id="@+id/edit_text_password"
         android:layout_width="305dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/edit_text_username"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/edit_text_background"
-        android:fontFamily="@font/ubuntu"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:paddingBottom="19dp"
+        android:paddingBottom="8dp"
         android:paddingEnd="30dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
@@ -44,7 +47,8 @@
         android:paddingTop="8dp"
         android:textColor="#a1a1a1"
         android:textColorHint="#a1a1a1"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
 
     <TextView
         android:id="@+id/text_forgot_password"
@@ -53,24 +57,26 @@
         android:layout_alignEnd="@+id/edit_text_username"
         android:layout_alignRight="@+id/edit_text_username"
         android:layout_below="@+id/edit_text_password"
-        android:fontFamily="@font/ubuntu_medium"
+        android:layout_marginTop="10dp"
         android:text="Forgot Password"
         android:textColor="#669a3d"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        app:fontFamily="@font/ubuntu_medium" />
 
     <Button
         android:id="@+id/sign_in"
-        android:layout_width="228dp"
+        android:layout_width="305dp"
         android:layout_height="40dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/text_forgot_password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button_background"
-        android:fontFamily="@font/ubuntu_bold"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingTop="7dp"
         android:text="@string/sign_in"
+        android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu_bold" />
 </RelativeLayout>

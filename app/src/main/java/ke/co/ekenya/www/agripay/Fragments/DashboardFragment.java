@@ -15,17 +15,17 @@ import android.widget.TextView;
 import ke.co.ekenya.www.agripay.R;
 
 public class DashboardFragment extends Fragment {
-    TextView cash, spend, today_dashboard, weekly_dashboard, monthly_dashboard;
+    TextView cash, spend, today_dashboard, weekly_dashboard, monthly_dashboard,text_wallet;
     ImageView today_dashboard_highlight, weekly_dashboard_highlight, monthly_dashboard_highlight;
     ListView dashboard_list;
 
     public DashboardFragment() {
-        // Required empty public constructor
+        //Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        //Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_dashboard, container, false);
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
@@ -38,6 +38,7 @@ public class DashboardFragment extends Fragment {
         weekly_dashboard_highlight = view.findViewById(R.id.weekly_dashboard_highlight);
         monthly_dashboard_highlight = view.findViewById(R.id.monthly_dashboard_highlight);
         dashboard_list = view.findViewById(R.id.dashboard_list);
+        text_wallet = view.findViewById(R.id.text_wallet);
 
         today_dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,9 +64,26 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        text_wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //do something
+                goToWalletFragment();
+            }
+        });
+
+
         initialize();
 
         return view;
+    }
+
+    private void goToWalletFragment() {
+        WalletFragment fragment = new WalletFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     private void initialize() {

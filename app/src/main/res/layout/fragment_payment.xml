@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AddressesFragment">
+
+    <ImageView
+        android:id="@+id/agripay_logo"
+        android:layout_width="41dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/agripay_logo" />
+
+    <ImageView
+        android:id="@+id/shop_search"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/search_icon" />
+
+    <ImageView
+        android:id="@+id/shop_cart"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/shop_search"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/shop_cart" />
+
+    <TextView
+        android:id="@+id/cart_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/agripay_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/green_circle"
+        android:gravity="center"
+        android:paddingEnd="3dp"
+        android:paddingStart="3dp"
+        android:text="4"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/agripay_logo"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gradient_shade" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:padding="15dp"
+        app:srcCompat="@drawable/ic_chevron_left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:text="@string/payment"
+        android:textColor="#669a3d"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/back"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/payments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/payments"
+                android:textColor="#185490"
+                android:textSize="16sp"
+                app:fontFamily="@font/ubuntu_medium" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/payments"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/gradient_shade" />
+
+            <TextView
+                android:id="@+id/credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/view2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/credit_card"
+                android:textColor="#777777"
+                android:textSize="16sp"
+                app:fontFamily="@font/ubuntu_medium" />
+
+            <TextView
+                android:id="@+id/m_pesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/credit_card"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/m_pesa"
+                android:textColor="#777777"
+                android:textSize="16sp"
+                app:fontFamily="@font/ubuntu_medium" />
+
+            <TextView
+                android:id="@+id/cash_on_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/m_pesa"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/cash_on_delivery"
+                android:textColor="#777777"
+                android:textSize="16sp"
+                app:fontFamily="@font/ubuntu_medium" />
+
+            <TextView
+                android:id="@+id/my_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cash_on_delivery"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/my_wallet"
+                android:textColor="#777777"
+                android:textSize="16sp"
+                app:fontFamily="@font/ubuntu_medium" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view2"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/credit_card_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginTop="11dp"
+                    android:buttonTint="#669a3d"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4" />
+
+                <RadioButton
+                    android:id="@+id/m_pesa_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:buttonTint="#669a3d"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4" />
+
+                <RadioButton
+                    android:id="@+id/cash_on_delivery_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:buttonTint="#669a3d"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4" />
+
+                <RadioButton
+                    android:id="@+id/my_wallet_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:buttonTint="#669a3d"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4" />
+            </RadioGroup>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/button_check_out"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="103dp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/checkout"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/shop_fragment_bottom_left" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/shop_fragment_bottom_right" />
+</RelativeLayout>

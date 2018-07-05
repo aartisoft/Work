@@ -46,18 +46,18 @@
         android:textSize="12sp"
         app:fontFamily="@font/ubuntu_medium" />
 
-    <TextView
+    <Button
         android:id="@+id/lets_shop"
         style="@android:style/Widget.Button"
         android:layout_width="228dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="96dp"
         android:background="@drawable/button_background"
         android:clickable="false"
-        android:drawableEnd="@drawable/chevron_right"
-        android:drawableRight="@drawable/chevron_right"
+        android:drawableEnd="@drawable/ic_chevron_right_white"
+        android:drawableRight="@drawable/ic_chevron_right_white"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingEnd="30dp"

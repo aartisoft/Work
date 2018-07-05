@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/shop_search"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
@@ -30,8 +30,8 @@
 
     <ImageView
         android:id="@+id/shop_cart"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/shop_search"
@@ -74,6 +74,7 @@
         android:layout_below="@+id/sliding_images"
         android:layout_gravity="center"
         android:layout_marginLeft="45dp"
+        android:theme="@style/Spinner"
         android:layout_marginStart="45dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/shop_spinner"

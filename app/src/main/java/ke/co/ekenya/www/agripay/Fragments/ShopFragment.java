@@ -73,6 +73,7 @@ public class ShopFragment extends Fragment {
             R.drawable.shop_image_slide_three};
 
     RecyclerView shop_items_recycler_view;
+    ImageView shop_cart;
 
     public ShopFragment() {
         //Required empty public constructor
@@ -84,6 +85,7 @@ public class ShopFragment extends Fragment {
 
         shop_items_recycler_view = view.findViewById(R.id.shop_items_recycler_view);
         carouselView = view.findViewById(R.id.sliding_images);
+        shop_cart = view.findViewById(R.id.shop_cart);
 
         shop_items_recycler_view.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
@@ -92,12 +94,27 @@ public class ShopFragment extends Fragment {
 
         initializeSlidingImages();
 
+        shop_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //do something
+                goToShoppingCartFragment();
+            }
+        });
+
         return view;
+    }
+
+    private void goToShoppingCartFragment() {
+        ShoppingCartFragment fragment = new ShoppingCartFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     private void initializeSlidingImages() {
         carouselView.setPageCount(sliding_images_array.length);
-
         carouselView.setImageListener(new ImageListener() {
             @Override
             public void setImageForPosition(int position, ImageView imageView) {

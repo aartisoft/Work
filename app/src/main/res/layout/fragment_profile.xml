@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AddressesFragment">
+
+    <ImageView
+        android:id="@+id/agripay_logo"
+        android:layout_width="41dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/agripay_logo" />
+
+    <ImageView
+        android:id="@+id/shop_search"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/search_icon" />
+
+    <ImageView
+        android:id="@+id/shop_cart"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/shop_search"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/shop_cart" />
+
+    <TextView
+        android:id="@+id/cart_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/agripay_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/green_circle"
+        android:gravity="center"
+        android:paddingEnd="3dp"
+        android:paddingStart="3dp"
+        android:text="4"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/agripay_logo"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gradient_shade" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:padding="15dp"
+        app:srcCompat="@drawable/ic_chevron_left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:text="@string/settings"
+        android:textColor="#669a3d"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu_medium" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/back"
+        android:layout_centerInParent="true"
+        android:elevation="5dp"
+        android:src="@color/colorWhite" />
+
+    <ImageView
+        android:id="@+id/edit_profile_image"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignBottom="@+id/profile_image"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_toRightOf="@+id/profile_image"
+        android:src="@drawable/edit_icon" />
+
+    <EditText
+        android:id="@+id/edit_text_username"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
+        android:hint="@string/username"
+        android:paddingBottom="8dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:textColor="#a1a1a1"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
+        android:hint="@string/email"
+        android:paddingBottom="8dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:textColor="#a1a1a1"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
+
+    <EditText
+        android:id="@+id/edit_text_mobile"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
+        android:hint="@string/mobile_number"
+        android:paddingBottom="8dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:textColor="#a1a1a1"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
+
+    <EditText
+        android:id="@+id/edit_text_password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text_mobile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
+        android:hint="@string/password"
+        android:paddingBottom="8dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:textColor="#a1a1a1"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
+
+    <ImageView
+        android:id="@+id/edit_password"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_centerInParent="true"
+        android:layout_alignBottom="@+id/edit_text_password"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/edit_text_password"
+        android:layout_toRightOf="@+id/edit_text_password"
+        android:src="@drawable/edit_icon" />
+
+    <EditText
+        android:id="@+id/edit_text_confirm_password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background2"
+        android:elevation="5dp"
+        android:hint="@string/confirm_password"
+        android:paddingBottom="8dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="8dp"
+        android:textColor="#a1a1a1"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16sp"
+        app:fontFamily="@font/ubuntu" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/shop_fragment_bottom_left" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/shop_fragment_bottom_right" />
+</RelativeLayout>

@@ -5,12 +5,15 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import ke.co.ekenya.www.agripay.R;
 
 public class SplashActivity extends AppCompatActivity {
-    TextView lets_shop, splash_text;
+    TextView splash_text;
+
+    Button lets_shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
