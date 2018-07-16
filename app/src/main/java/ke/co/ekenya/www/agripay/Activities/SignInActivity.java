@@ -12,7 +12,7 @@ import ke.co.ekenya.www.agripay.Fragments.SignUpFragment;
 import ke.co.ekenya.www.agripay.R;
 
 public class SignInActivity extends AppCompatActivity {
-    private FrameLayout sign_n_or_sign_up_content;
+    FrameLayout sign_n_or_sign_up_content;
     TextView sign_in, sign_up;
     ImageView bottom_sign_in, bottom_sign_up;
 
@@ -39,6 +39,7 @@ public class SignInActivity extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //change stuff
                 highlight_sign_up();
             }
         });
