@@ -11,18 +11,18 @@ import android.widget.ImageView;
 
 import ke.co.ekenya.www.agripay.R;
 
-public class PaymentDetailsFragment extends Fragment {
+public class CardPaymentDetailsFragment extends Fragment {
     Button button_pay;
     ImageView back;
 
-    public PaymentDetailsFragment() {
+    public CardPaymentDetailsFragment() {
         //Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_payment_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_card_payment_details, container, false);
 
         button_pay = view.findViewById(R.id.button_pay);
         back = view.findViewById(R.id.back);

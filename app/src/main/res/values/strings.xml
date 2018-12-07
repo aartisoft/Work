@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AgriPay</string>
+    <string name="app_name">Fresh and Safe</string>
     <string name="lets_shop">Lets Shop</string>
     <string name="splash_text">Lorem ipsum dolor sit amet, consectetur dipisicing elit,</string>
 
@@ -60,6 +60,7 @@
     <string name="logout">Logout</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="transactions">Transactions</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
     <string-array name="spinnerCategoryItems">
         <item>Categories</item>
     </string-array>
